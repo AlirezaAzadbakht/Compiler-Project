@@ -1,0 +1,91 @@
+and             {tokens.add(new token("keyword", yytext()));}
+and_eq          {tokens.add(new token("keyword", yytext()));}
+asm             {tokens.add(new token("keyword", yytext()));}
+auto            {tokens.add(new token("keyword", yytext()));}
+bitand          {tokens.add(new token("keyword", yytext()));}
+bitor           {tokens.add(new token("keyword", yytext()));}
+bool            {tokens.add(new token("keyword", yytext()));}
+break           {tokens.add(new token("keyword", yytext()));}
+case            {tokens.add(new token("keyword", yytext()));}
+catch           {tokens.add(new token("keyword", yytext()));}
+char            {tokens.add(new token("keyword", yytext()));}
+class           {tokens.add(new token("keyword", yytext()));}
+compl           {tokens.add(new token("keyword", yytext()));}
+const           {tokens.add(new token("keyword", yytext()));}
+const_cast      {tokens.add(new token("keyword", yytext()));}
+continue        {tokens.add(new token("keyword", yytext()));}
+default         {tokens.add(new token("keyword", yytext()));}
+delete          {tokens.add(new token("keyword", yytext()));}
+do              {tokens.add(new token("keyword", yytext()));}
+double          {tokens.add(new token("keyword", yytext()));}
+dynamic_cast    {tokens.add(new token("keyword", yytext()));}
+else            {tokens.add(new token("keyword", yytext()));}
+enum            {tokens.add(new token("keyword", yytext()));}
+explicit        {tokens.add(new token("keyword", yytext()));}
+export          {tokens.add(new token("keyword", yytext()));}
+extern          {tokens.add(new token("keyword", yytext()));}
+float           {tokens.add(new token("keyword", yytext()));}
+for            {tokens.add(new token("keyword", yytext()));}
+friend          {tokens.add(new token("keyword", yytext()));}
+goto            {tokens.add(new token("keyword", yytext()));}
+if          {tokens.add(new token("keyword", yytext()));}
+inline          {tokens.add(new token("keyword", yytext()));}
+int         {tokens.add(new token("keyword", yytext()));}
+long            {tokens.add(new token("keyword", yytext()));}
+mutable         {tokens.add(new token("keyword", yytext()));}
+namespace           {tokens.add(new token("keyword", yytext()));}
+new         {tokens.add(new token("keyword", yytext()));}
+not         {tokens.add(new token("keyword", yytext()));}
+not_eq          {tokens.add(new token("keyword", yytext()));}
+operator            {tokens.add(new token("keyword", yytext()));}
+or          {tokens.add(new token("keyword", yytext()));}
+or_eq           {tokens.add(new token("keyword", yytext()));}
+private         {tokens.add(new token("keyword", yytext()));}
+protected           {tokens.add(new token("keyword", yytext()));}
+public          {tokens.add(new token("keyword", yytext()));}
+register            {tokens.add(new token("keyword", yytext()));}
+reinterpret_cast            {tokens.add(new token("keyword", yytext()));}
+return          {tokens.add(new token("keyword", yytext()));}
+short           {tokens.add(new token("keyword", yytext()));}
+signed          {tokens.add(new token("keyword", yytext()));}
+sizeof          {tokens.add(new token("keyword", yytext()));}
+static          {tokens.add(new token("keyword", yytext()));}
+static_cast         {tokens.add(new token("keyword", yytext()));}
+struct          {tokens.add(new token("keyword", yytext()));}
+switch          {tokens.add(new token("keyword", yytext()));}
+template            {tokens.add(new token("keyword", yytext()));}
+this            {tokens.add(new token("keyword", yytext()));}
+throw           {tokens.add(new token("keyword", yytext()));}
+try         {tokens.add(new token("keyword", yytext()));}
+typedef         {tokens.add(new token("keyword", yytext()));}
+typeid          {tokens.add(new token("keyword", yytext()));}
+typename            {tokens.add(new token("keyword", yytext()));}
+union           {tokens.add(new token("keyword", yytext()));}
+unsigned            {tokens.add(new token("keyword", yytext()));}
+using           {tokens.add(new token("keyword", yytext()));}
+virtual         {tokens.add(new token("keyword", yytext()));}
+void            {tokens.add(new token("keyword", yytext()));}
+volatile            {tokens.add(new token("keyword", yytext()));}
+wchar_t         {tokens.add(new token("keyword", yytext()));}
+while           {tokens.add(new token("keyword", yytext()));}
+xor         {tokens.add(new token("keyword", yytext()));}
+xor_eq          {tokens.add(new token("keyword", yytext()));}
+false           {tokens.add(new token("keyword", yytext()));}
+true            {tokens.add(new token("keyword", yytext()));}
+
+http://cs.smu.ca/~porter/csc/ref/cpp_keywords.html
+
+cin         {tokens.add(new token("Predefined Identifiers", yytext()));}
+endl        {tokens.add(new token("Predefined Identifiers", yytext()));}
+INT_MIN     {tokens.add(new token("Predefined Identifiers", yytext()));}
+iomanip     {tokens.add(new token("Predefined Identifiers", yytext()));}
+main        {tokens.add(new token("Predefined Identifiers", yytext()));}
+npos        {tokens.add(new token("Predefined Identifiers", yytext()));}
+std         {tokens.add(new token("Predefined Identifiers", yytext()));}
+cout        {tokens.add(new token("Predefined Identifiers", yytext()));}
+include     {tokens.add(new token("Predefined Identifiers", yytext()));}
+INT_MAX     {tokens.add(new token("Predefined Identifiers", yytext()));}
+iostream    {tokens.add(new token("Predefined Identifiers", yytext()));}
+MAX_RAND    {tokens.add(new token("Predefined Identifiers", yytext()));}
+NULL        {tokens.add(new token("Predefined Identifiers", yytext()));}
+string      {tokens.add(new token("Predefined Identifiers", yytext()));}
