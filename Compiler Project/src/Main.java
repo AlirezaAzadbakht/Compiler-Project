@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import entity.SymbolTable;
 import entity.token;
-import grammar.*;
+import lexer.*;
 
 public class Main {
 
