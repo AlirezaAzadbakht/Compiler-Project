@@ -1,0 +1,8 @@
+E,T,F
+(,),id,number,+,*
+E
+T
+T
+F
+F
+(E)|id|number

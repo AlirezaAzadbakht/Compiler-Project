@@ -2,13 +2,16 @@ package test;
 
 import java.io.IOException;
 
+import entity.parsTable;
 import parser.LL1ParsTableGenerator;
 
 public class parsTableGenerationTest {
 
 	public static void main(String[] args) throws Exception {
-		LL1ParsTableGenerator ptg = new LL1ParsTableGenerator();
-		ptg.init("sample1.txt");
+		LL1ParsTableGenerator PTG = new LL1ParsTableGenerator();
+		parsTable parsTable = PTG.init("sample2.txt");
+
+		parsTable.printTable();
 	}
 
 }

@@ -3,16 +3,17 @@ package parser;
 import java.util.ArrayList;
 
 public class parseTable {
-	public  ArrayList<first> first = new ArrayList<first>();
-	public  ArrayList<follow> follow = new ArrayList<follow>();
-	public  String table[][];
+	public ArrayList<first> first = new ArrayList<first>();
+	public ArrayList<follow> follow = new ArrayList<follow>();
+	public String table[][];
 
-	public parseTable(ArrayList<first> first,ArrayList<follow> follow) {
-		this.follow=follow;
-		this.first=first;
-	
+	public parseTable(ArrayList<first> first, ArrayList<follow> follow) {
+		this.follow = follow;
+		this.first = first;
+
 	}
-	public  void filler(grammer grammar) {
+
+	public void filler(grammer grammar) {
 
 		for (int i = 0; i < table.length; i++) {
 			for (int j = 0; j < table[i].length; j++) {
@@ -33,8 +34,10 @@ public class parseTable {
 						ArrayList<String> productions = getProductions(src, grammar);
 						if (productions != null) {
 							if (containEpsilon(productions)) {
+
 								ArrayList<String> followOf = followOf(src);
 								for (String compare : followOf) {
+
 									if (table[0][j].equals(compare)) {
 										table[i][j] = "EPSILON";
 									}
@@ -49,7 +52,7 @@ public class parseTable {
 								ArrayList<String> firstOf = firstOf(var);
 								var = "";
 								for (int l = 0; l < splitProduction.get(k).size(); l++)
-									var += splitProduction.get(k).get(l)+" ";
+									var += splitProduction.get(k).get(l) + " ";
 
 								if (firstOf != null)
 									for (String compare : firstOf) {
@@ -91,7 +94,7 @@ public class parseTable {
 
 	}
 
-	public  ArrayList<String> followOf(String src) {
+	public ArrayList<String> followOf(String src) {
 		for (int i = 0; i < follow.size(); i++) {
 			if (follow.get(i).variable.equals(src)) {
 				return follow.get(i).setOfFollow;
@@ -101,7 +104,7 @@ public class parseTable {
 		return null;
 	}
 
-	public  ArrayList<String> firstOf(String src) {
+	public ArrayList<String> firstOf(String src) {
 		for (int i = 0; i < first.size(); i++) {
 			if (first.get(i).variable.equals(src)) {
 				return first.get(i).setOfFirst;
@@ -137,24 +140,23 @@ public class parseTable {
 		}
 		System.out.println();
 	}
-	
 
-
-//	@SuppressWarnings("static-access")
-//	public static void main(String[] args) throws Exception {
-//		grammer grammar = new grammer("sample1.txt");
-//		FirstAndFollow f = new FirstAndFollow();
-//		f.First(grammar);
-//		f.Follow(grammar);
-//		first = f.first;
-//		follow = f.follow;
-//		// f.printFirst(first);
-//		// f.printFollow(follow);
-//		table = new String[grammar.nonTerminals.size() + 1][grammar.terminals.size() + 2];
-//		filler(grammar);
-//
-//		for (String[] row : table) {
-//			printRow(row);
-//		}
-//	}
+	// @SuppressWarnings("static-access")
+	// public static void main(String[] args) throws Exception {
+	// grammer grammar = new grammer("sample1.txt");
+	// FirstAndFollow f = new FirstAndFollow();
+	// f.First(grammar);
+	// f.Follow(grammar);
+	// first = f.first;
+	// follow = f.follow;
+	// // f.printFirst(first);
+	// // f.printFollow(follow);
+	// table = new String[grammar.nonTerminals.size() +
+	// 1][grammar.terminals.size() + 2];
+	// filler(grammar);
+	//
+	// for (String[] row : table) {
+	// printRow(row);
+	// }
+	// }
 }

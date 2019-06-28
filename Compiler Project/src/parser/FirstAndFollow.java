@@ -8,8 +8,8 @@ import java.util.Arrays;
 
 public class FirstAndFollow {
 
-	public static ArrayList<first> first = new ArrayList<first>();
-	public static ArrayList<follow> follow = new ArrayList<follow>();
+	public  ArrayList<first> first = new ArrayList<first>();
+	public  ArrayList<follow> follow = new ArrayList<follow>();
 
 	public void First(grammer grammer) {
 		String var = "";
@@ -187,7 +187,7 @@ public class FirstAndFollow {
 
 	}
 
-	public static String firstTillFollw(ArrayList<String> x, int i, String src) {
+	public  String firstTillFollw(ArrayList<String> x, int i, String src) {
 		if (i == -1) {
 			i = x.size() - 1;
 		}
@@ -270,7 +270,7 @@ public class FirstAndFollow {
 		return x;
 	}
 
-	public static ArrayList<String> getFirstList(String x) {
+	public  ArrayList<String> getFirstList(String x) {
 		for (int i = 0; i < first.size(); i++) {
 			if (first.get(i).variable.equals(x)) {
 				return first.get(i).setOfFirst;
@@ -280,7 +280,7 @@ public class FirstAndFollow {
 		return null;
 	}
 
-	public static ArrayList<String> getFollowList(String x) {
+	public  ArrayList<String> getFollowList(String x) {
 		for (int i = 0; i < follow.size(); i++) {
 			if (follow.get(i).variable.equals(x)) {
 				return follow.get(i).setOfFollow;
@@ -360,7 +360,7 @@ public class FirstAndFollow {
 
 	}
 
-	public static boolean inFirst(String z) {
+	public  boolean inFirst(String z) {
 		for (first string : first) {
 			if (string.variable.equals(z)) {
 				return true;
@@ -369,7 +369,7 @@ public class FirstAndFollow {
 		return false;
 	}
 
-	public static boolean inFollow(String z) {
+	public  boolean inFollow(String z) {
 		for (follow string : follow) {
 			if (string.variable.equals(z)) {
 				return true;
@@ -378,7 +378,7 @@ public class FirstAndFollow {
 		return false;
 	}
 
-	public static int FirstIndex(String z) {
+	public  int FirstIndex(String z) {
 		int x = 0;
 		for (first string : first) {
 			if (string.variable.equals(z)) {
@@ -390,7 +390,7 @@ public class FirstAndFollow {
 		return -1;
 	}
 
-	public static boolean containEpsilon(ArrayList<String> x) {
+	public static  boolean containEpsilon(ArrayList<String> x) {
 
 		for (String string : x) {
 			if (string.equals("!")) {
@@ -400,7 +400,7 @@ public class FirstAndFollow {
 		return false;
 	}
 
-	public static boolean containEpsilon2(ArrayList<ArrayList<String>> temp) {
+	public  boolean containEpsilon2(ArrayList<ArrayList<String>> temp) {
 		for (int i = 0; i < temp.size(); i++)
 			for (String string : temp.get(i)) {
 				if (string.equals("!")) {
@@ -410,14 +410,14 @@ public class FirstAndFollow {
 		return false;
 	}
 
-	public static void printFirst() {
+	public  void printFirst() {
 		for (int i = 0; i < first.size(); i++) {
 			first.get(i).print();
 		}
 
 	}
 
-	public static void printFollow() {
+	public  void printFollow() {
 		for (int i = 0; i < follow.size(); i++) {
 			follow.get(i).print();
 		}
@@ -457,14 +457,12 @@ public class FirstAndFollow {
 	}
 
 	// For testing
-
-	// public static void main(String[] args) throws Exception {
-	// grammer grammer = new grammer("sample1.txt");
-	// First(grammer);
-	// Follow(grammer);
-	// grammer.print();
-	// printFirst(first);
-	// printFollow(follow);
+//
+//	 public static void main(String[] args) throws Exception {
+//	 grammer grammer = new grammer("sample2.txt");
+//	 
+//	 grammer.print();
+//	 
 
 	// System.out.println();
 	// System.out.println("OUTPUT IS NOW IN first.OUT AND follow.out
@@ -472,5 +470,5 @@ public class FirstAndFollow {
 	// writeFirstInFile(first);
 	// writeFollowInFile(follow);
 
-	// }
+//	 }
 }

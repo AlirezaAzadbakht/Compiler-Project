@@ -37,7 +37,7 @@ public class ParserTest {
 			 */
 
 			LL1ParsTableGenerator PTG = new LL1ParsTableGenerator();
-			parsTable parsTable = PTG.init("sample1.txt");
+			parsTable parsTable = PTG.init("sample2.txt");
 
 			parsTable.printTable();
 
