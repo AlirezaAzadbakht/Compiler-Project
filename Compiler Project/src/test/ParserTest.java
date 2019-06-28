@@ -38,9 +38,9 @@ public class ParserTest {
 			LL1Parser parser = new LL1Parser(tokenStream, parsTable);
 			boolean result = parser.pars();
 			if(result)
-				System.out.println("Compile Accepted");
+				System.out.println("> Compile Accepted");
 			else
-				System.out.println("Compile error");
+				System.out.println("> Compile error");
 			/*
 			 * Code Generation part
 			 */
