@@ -1,0 +1,39 @@
+E
+(
+T E'
+E
+id
+T E'
+E'
++
++ T E'
+E'
+)
+epsilon
+E'
+$
+epsilon
+T
+(
+F T'
+T
+id
+F T'
+T'
++
+epsilon
+T'
+*
+* F T'
+T'
+)
+epsilon
+T'
+$
+epsilon
+F
+(
+( E )
+F
+id
+id
