@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import entity.SymbolTable;
 import entity.parsTable;
-import entity.parseTable;
+
 import entity.token;
 import lexer.myLexer;
 import parser.LL1Parser;
@@ -36,8 +36,11 @@ public class ParserTest {
 			parsTable.init("Grammer.txt");
 			parsTable.printTable();
 			LL1Parser parser = new LL1Parser(tokenStream, parsTable);
-			parser.pars();
-
+			boolean result = parser.pars();
+			if(result)
+				System.out.println("Compile Accepted");
+			else
+				System.out.println("Compile error");
 			/*
 			 * Code Generation part
 			 */

@@ -23,15 +23,38 @@ public class LL1Parser {
 
 		while (!stack.peek().equals("$")) {
 			// TODO token ya tokentype????
-			ArrayList<String> productionRule = pt.find(stack.pop(), ts.get(tsIndex).getTokenType());
+			String nonTerminal = stack.pop();
+			String terminal = "$";
+			if (!(tsIndex == ts.size())) {
+				terminal = ts.get(tsIndex).getTokenType();
+
+				switch (terminal) {
+				case "symbol":
+					terminal = ts.get(tsIndex).getToken();
+					break;
+
+				default:
+					break;
+				}
+			}
+			ArrayList<String> productionRule = pt.find(nonTerminal, terminal);
 			if (!productionRule.get(0).equals("error")) {
-				for (int i = productionRule.size(); i >= 0; i--) {
+				for (int i = productionRule.size() - 1; i >= 0; i--) {
 					if (!productionRule.get(i).equals("epsilon"))
 						stack.push(productionRule.get(i));
 				}
 			} else {
 				return false;
 			}
+			if (!(tsIndex == ts.size())) {
+				if (stack.peek().equals(ts.get(tsIndex).getTokenType())
+						|| stack.peek().equals(ts.get(tsIndex).getToken())) {
+					System.out.println(stack.peek() + " - matched");
+					tsIndex++;
+					stack.pop();
+				}
+			}
+
 		}
 
 		return true;

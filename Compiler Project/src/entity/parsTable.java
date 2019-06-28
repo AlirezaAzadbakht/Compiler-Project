@@ -9,7 +9,6 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-import Entities.Point;
 
 public class parsTable {
 	private ArrayList<parsTable_node> table;
@@ -38,11 +37,12 @@ public class parsTable {
 	}
 
 	public ArrayList<String> find(String nonTerminal, String terminal) {
+		System.out.println(nonTerminal+" "+ terminal);
 		ArrayList<String> result = new ArrayList<>();
 
 		Boolean flag = false;
 		for (parsTable_node nod : table) {
-			if (nod.nonTerminal == nonTerminal && nod.terminal == terminal) {
+			if (nod.nonTerminal.equals(nonTerminal) && nod.terminal.equals(terminal)) {
 				flag = true;
 				StringTokenizer st = new StringTokenizer(nod.productionRule, " ");
 				while (st.hasMoreTokens()) {
