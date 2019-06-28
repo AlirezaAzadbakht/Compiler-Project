@@ -40,7 +40,7 @@ public class LL1Parser {
 			ArrayList<String> productionRule = pt.find(nonTerminal, terminal);
 			if (!productionRule.get(0).equals("error")) {
 				for (int i = productionRule.size() - 1; i >= 0; i--) {
-					if (!productionRule.get(i).equals("epsilon"))
+					if (!productionRule.get(i).equals("EPSILON"))
 						stack.push(productionRule.get(i));
 				}
 			} else {

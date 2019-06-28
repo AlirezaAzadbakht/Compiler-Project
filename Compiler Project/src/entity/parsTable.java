@@ -9,7 +9,6 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-
 public class parsTable {
 	private ArrayList<parsTable_node> table;
 
@@ -26,18 +25,21 @@ public class parsTable {
 		System.out.println("===================================================");
 	}
 
-	public void init(String GrammerDir) throws IOException {
-		File file = new File(GrammerDir);
-		BufferedReader br = new BufferedReader(new FileReader(file));
-		String st;
-		while ((st = br.readLine()) != null) {
-			parsTable_node temp = new parsTable_node(st, br.readLine(), br.readLine());
-			this.table.add(temp);
+	public void init(String[][] table) throws IOException {
+
+		for (int i = 1; i < table.length; i++) {
+			for (int j = 1; j < table[0].length; j++) {
+				if (table[i][j] != null) {
+					parsTable_node temp = new parsTable_node(table[i][0], table[0][j], table[i][j]);
+					this.table.add(temp);
+				}
+			}
 		}
+
 	}
 
 	public ArrayList<String> find(String nonTerminal, String terminal) {
-		System.out.println(nonTerminal+" "+ terminal);
+		System.out.println(nonTerminal + " " + terminal);
 		ArrayList<String> result = new ArrayList<>();
 
 		Boolean flag = false;

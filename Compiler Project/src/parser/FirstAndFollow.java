@@ -11,7 +11,7 @@ public class FirstAndFollow {
 	public static ArrayList<first> first = new ArrayList<first>();
 	public static ArrayList<follow> follow = new ArrayList<follow>();
 
-	public static void First(grammer grammer) {
+	public void First(grammer grammer) {
 		String var = "";
 		String firstValue = "";
 
@@ -98,7 +98,7 @@ public class FirstAndFollow {
 
 	}
 
-	public static void Follow(grammer grammer) {
+	public void Follow(grammer grammer) {
 		String temp = "";
 
 		for (int i = 0; i < grammer.nonTerminals.size(); i++) {
@@ -410,14 +410,14 @@ public class FirstAndFollow {
 		return false;
 	}
 
-	public static void printFirst(ArrayList<first> first) {
+	public static void printFirst() {
 		for (int i = 0; i < first.size(); i++) {
 			first.get(i).print();
 		}
 
 	}
 
-	public static void printFollow(ArrayList<follow> follow) {
+	public static void printFollow() {
 		for (int i = 0; i < follow.size(); i++) {
 			follow.get(i).print();
 		}
@@ -458,17 +458,19 @@ public class FirstAndFollow {
 
 	// For testing
 
-	 public static void main(String[] args) throws Exception {
-	 grammer grammer = new grammer("sample1.txt");
-	 First(grammer);
-	 Follow(grammer);
-	 printFirst(first);
-	 printFollow(follow);
-	
-//	 System.out.println();
-//	 System.out.println("OUTPUT IS NOW IN first.OUT AND follow.out FILES");
-//	 writeFirstInFile(first);
-//	 writeFollowInFile(follow);
-	
-	 }
+	// public static void main(String[] args) throws Exception {
+	// grammer grammer = new grammer("sample1.txt");
+	// First(grammer);
+	// Follow(grammer);
+	// grammer.print();
+	// printFirst(first);
+	// printFollow(follow);
+
+	// System.out.println();
+	// System.out.println("OUTPUT IS NOW IN first.OUT AND follow.out
+	// FILES");
+	// writeFirstInFile(first);
+	// writeFollowInFile(follow);
+
+	// }
 }

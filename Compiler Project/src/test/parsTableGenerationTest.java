@@ -6,9 +6,9 @@ import parser.LL1ParsTableGenerator;
 
 public class parsTableGenerationTest {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		LL1ParsTableGenerator ptg = new LL1ParsTableGenerator();
-		ptg.init("rawGrammerTest.txt");
+		ptg.init("sample1.txt");
 	}
 
 }
