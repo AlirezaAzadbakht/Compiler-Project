@@ -1,0 +1,21 @@
+SET CLASSPATH=.;C:\Users\Alireza\Documents\mylib-java\antlr-4.7.2-complete.jar;%CLASSPATH%
+set classpath=C:\Users\Alireza\Documents\mylib-java\antlr-4.7.2-complete.jar
+
+SET CLASSPATH=.;C:\Users\Alireza\Documents\mylib-java\antlr-4.7.2-complete.jar;%CLASSPATH%
+
+
+java -cp C:\Users\Alireza\Documents\mylib-java\antlr-4.7.2-complete.jar org.antlr.v4.Tool Mu.g4 -visitor
+
+
+javac -cp C:\Users\Alireza\Documents\mylib-java\antlr-4.7.2-complete.jar *.java
+
+java -cp .;C:\Users\Alireza\Documents\mylib-java\antlr-4.7.2-complete.jar Main
+
+java -cp antlr-4.0-complete.jar org.antlr.v4.Tool Mu.g4 -visitor
+
+
+
+
+final
+
+java -cp C:\Users\Alireza\Documents\mylib-java\antlr-4.7.2-complete.jar org.antlr.v4.Tool MiniCpp.g4 -visitor

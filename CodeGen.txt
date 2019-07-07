@@ -1,0 +1,52 @@
+Code Generator Example:
+int a , c ;
+int d ;
+we need a global variable ( name STP ) to keep track of the latest memory location that is yet to be allocated
+e.g , in Symbol Table we have int a and int c , now we make a new variable name d , So a and c are saved into the memory and the value of Global Variable for symbol table ( STP) is updated to STP += ( 16 bit integer a ) + ( 16 bit integer c ) 
+Note that you must add 2 columns to your symbol table , one is the addresses of your variables , if we save a in location n1 , we must save it for a to use it late , and the other one is the number of blocks( you can manage it anyway you want ) cause you may have a variable name a in method1 nd the an other a in method2 , but these 2 differs from each other so need to different home in symbol table
+
+Symbol Table:
+
+name | type | location | block
+   a           int        n1              main( or 1 or anything you want :))
+
+
+
+
+c = 2 ;
+we first push a integer (2) into our stack , then pop the integer to the location of c
+
+push int 
+pop n[LSP]   ( n is Address of c and we can set LSP to 0000)
+
+a = 3;
+
+cin >> d ;
+geti   ( get 16 bit integer from standard input and push it)
+pop n3[LSP]   ( pop the top of the stack that is the value of d into location addressed by n3 ( address of d ) + LSP ( we can set it to 0000))
+
+a = a + c ;
+push n1[LSP]   (n1 is the address of a , get a from memory)
+push n2[LSP]   (n2 is the address of c , get c from memory)
+add  ( pop thw top two , add them and push the result )
+pop n1[LSP]   ( pop the result in to location a)
+
+
+if( a == d )
+{
+//
+}
+--> assume that the line after the if statement has label L
+
+for a == d , one way is to push a and d into stack , calculate a - d , if it wasn't equal to zero , jump to L , if it was , continue
+push n3[LSP]
+push n1[LSP]
+neg
+jnz
+
+
+(we assume that all the variable used here in this example are local so we use LSP register)
+
+
+
+for more information: you can read the link bellow the word file

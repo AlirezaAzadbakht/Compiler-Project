@@ -1,0 +1,10 @@
+java -cp .;antlr-4.7.2-complete.jar org.antlr.v4.gui.TestRig CPP14 translationunit -gui HelloWorld.cpp
+
+javac -cp ./antlr-4.7.2-complete.jar *.java
+
+java -cp antlr-4.7.2-complete.jar org.antlr.v4.gui.TestRig
+
+javac -cp ./antlr-4.7.2-complete.jar *.java
+
+java -jar antlr-4.7.2-complete.jar CPP14.g4
+
